@@ -54,7 +54,7 @@ const message = 'hello detective'
         const mailOptions = {
             from: 'adarsh0727@gmail.com',
             to: `${user.userId}`,
-            subject: 'Your OTP',
+            subject: 'OTP for Authentication',
             text: `Your OTP is: ${user.otpG}`
         };
     
@@ -87,9 +87,9 @@ const message = 'hello detective'
 app.post('/verify', (req, res) => {
     const otpR = req.body.otp;
     if(otpR===user.otpG){
-        res.status(200).send("OK baby")
+        res.status(200).send("<h1>Page Verified</h1>")
     }else{
-        res.status(200).send("no baby")
+        res.status(200).send("</h1>Verification Failed</h1>")
     }
 
 })
