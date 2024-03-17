@@ -1,0 +1,86 @@
+<html>
+        <head>
+        <title>Student Registration Form Using Table in HTML</title>
+        <link rel="stylesheet" href="register_hackathon.css">
+       
+        </head>
+        <body>
+        <h2>Where IDEAS turns into INNOVATION<br>Organize a HACKATHON</h3>
+        <table align="center" cellpadding = "10">
+        <!--------------------- First Name ------------------------------------------>
+        <tr>
+        <td  style="padding-left: 30px;">Name</td>
+        <td><input type="text" name="FirstName" maxlength="50" placeholder="Aditi Rathore" style="font-size:13px; background-color: #1c1e21;" />
+        
+        </td>
+        </tr>
+        <!------------------------ Last Name --------------------------------------->
+        <tr>
+            <td style="padding-left: 30px;">Email ID</td>
+            <td><input type="email" name="EmailID" maxlength="100" placeholder="aditira@gmail.com" style="font-size:13px;background-color: #1c1e21; "/></td>
+            </tr>
+        <tr>
+            <tr >
+                <td  style="padding-left: 30px;" >Mobile Number</td>
+                <td>
+                <input type="text" name="MobileNumber" maxlength="10" placeholder="6264xxxxxx" style="font-size:13px;background-color: #1c1e21;"/>
+                </tr>
+                <tr>
+                <td  style="padding-left: 30px;">Describe your<br>Hackathon <br /><br /></td>
+                <td><textarea name="Address" rows="10" cols="50" style="background-color: #1c1e21; width:223px; height:100px; border:none; color: white;"></textarea></td>
+                </tr>
+                <tr>
+                    <td  style="padding-left: 30px;">Mode</td>
+                    <td>
+                    <input type="radio" name="Gender" value="Male" />
+                    Virtual
+                    <input type="radio" name="Gender" value="Female" />
+                    In-Person
+                    </td>
+                    </tr>
+           
+       
+     
+      
+       
+      
+        <tr>
+        <td  style="padding-left: 30px;">Duration</td>
+        <td><input type="text" name="State" maxlength="50" placeholder="2-3 hours" style="font-size:13px;background-color: #1c1e21;"/>
+        
+        </td>
+        </tr>
+        <!------------------------------ Country --------------------------------->
+        <tr>
+        <td  style="padding-left: 30px;">Levels</td>
+        <td><input type="text" name="Country" placeholder="3" style="font-size:13px;background-color: #1c1e21;" /></td>
+        </tr>
+      
+        <tr>
+        <td  style="padding-left: 30px;">Theme for<br />Hackathon</td>
+        <td>
+        <input type="radio" name="CourseBCA" value="BCA">
+        General Hackathons<br>
+        <input type="radio" name="CourseBCom" value="B.Com">
+        Social Impact Hackathons<br>
+        <input type="radio" name="CourseBA" value="B.A">
+        Startup Hackathons<br>
+        <input type="radio" name="CourseMCA" value="BCA">
+        Data Science Hackathons<br>
+        <input type="radio" name="CourseMCom" value="B.Com">
+        Game Development Hackathons<br>
+        <input type="radio" name="CourseMSc" value="B.Sc">
+        24-Hour Hackathons<br>
+        </td>
+        </tr>
+        <!----------------------- Submit and Reset ------------------------------->
+        <tr>
+        <td colspan="2" align="center">
+        <input type="submit" value="Submit" style="font-size:13px; background-color: #1896f7; color:white; height:30px;" >
+        <input type="reset" value="Reset" style="font-size:13px;background-color: #1896f7; color:white; height:30px;">
+        </td>
+        </tr>
+        </table>
+        </form>
+        </body>
+        </html>

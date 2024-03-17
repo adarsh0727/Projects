@@ -1,0 +1,198 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #e3f2fd;
+}
+.container{
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    border-radius: 12px;
+}
+.select-btn{
+    /* display: flex; */
+    height: 80px;
+    width:299px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0px;
+    border-radius: 0px;
+    cursor: pointer;
+    background-color:#1c1e21;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position:absolute;
+    top:24px;
+    left:25px;
+    border:solid white 1px;
+    border-radius: 15px;
+
+}
+.select-btn .btn-text{
+    font-size: 27px;
+    font-weight: 400;
+    color: white;
+    border-radius: 15px;
+    
+}
+.select-btn .arrow-dwn{
+   
+    height: 25px;
+    width: 30px;
+    color: #c7c7c7;
+    font-size: 14px;
+    border-radius: 100%;
+    background: #4070f4;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    position:absolute;
+    top:25px;
+    left:245px;
+}
+.select-btn.open .arrow-dwn{
+    transform: rotate(-180deg);
+}
+.list-items{
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color:#1c1e21;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    margin-left: 50px;
+    line-height: 54px;
+    color:white;
+    border-radius: 15px;
+}
+.select-btn.open ~ .list-items{
+    display: block;
+}
+.list-items .item{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 65px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+   
+.list-items .item:hover{
+    background-color: #4070f4;
+    color:white;
+}
+.item .item-text{
+    font-size: 26px;
+    font-weight: 400;
+    color: white;
+
+}
+.item .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+.item.checked .checkbox{
+    background-color: #4070f4;
+    border-color: #4070f4;
+}
+.checkbox .check-icon{
+    color: #fff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+.item.checked .check-icon{
+    transform: scale(1);
+}
+.container{
+    display: flex;
+
+}
+
+.submit-btn{
+    
+    color:white;
+    font-size: 56px;
+    font-weight: 400;
+    
+    margin-left: 20px;
+    margin-top: 90px;
+    
+    
+}
+body{background: #1c1e21 url(image-146@2x.png);
+      /* background-position:left center; */
+      background-repeat: none;
+      background-color: navy;
+}
+.box{
+    
+    width:690px;
+    height:500px;
+    position: absolute;
+    top:209px;
+    left:855px;
+    background: rgba(0,0,0,0.8);
+    opacity:0.8;
+    border-radius: 15px;
+    
+   
+   
+
+}
+.req{
+    font-size: 15px;
+}
+.name{
+    font-size: 35px;
+    color:white;
+    margin-left:20px;
+    margin-top:496px;
+  
+}
+    
+
+    .form-control{
+        background-color: #1c1e21;
+        /* background-color: red; */
+    margin-left:20px;
+    margin-top: 2px;
+    opacity:100;
+    border:solid white 0.5px;
+    border-radius: 15px;
+    
+    color:white;
+
+    }
+    .tag{
+        position:absolute;
+        top:127px;
+        left:798px;
+        color:white;
+        
+        width:699px;
+        height:76px;
+        text-align: center;
+        font-size:35px;
+        
+
+    }
+   .text{
+    margin-top:15px;
+   }

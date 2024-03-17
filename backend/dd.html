@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>team_page</title>
+    <style>
+        .body{
+            background-image: url(../frontend/image-146@2x.png);
+            background-color:rgb(0,70,70);
+        }
+        /* Styles from the previous example */
+
+        /* Style for the submit button */
+        .submit-btn {
+            margin-top: 10px;
+            display: block;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+     <link rel="stylesheet" href="../frontend/create_team.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+</head>
+<body>
+    <div style="display: flex;flex-direction: column;
+    justify-content: center; text-align: center;height: 100vh;">
+    <h2 class="tag">Create your team now!</h2>
+    <div class="box">
+        <div class="text">
+        <div class="input">
+            <label class="name" style="font-size: 33px;">Hackathon Name<span class="req"></span> </label>
+            <input type="text" class="form-control" style="font-size: 25px; width:400px; height: 40px;" id="first_name" required data-validation-required-message="Please enter your name." autocomplete="off">
+            <p class="help-block text-danger"></p>
+          </div>
+          <div class="input">
+            <label class="name" style="font-size: 33px;">Number of participants<span class="req"></span> </label>
+            <input type="text" class="form-control" style="font-size: 25px; width:400px; height: 40px;" id="first_name" required data-validation-required-message="No  . Of participants" autocomplete="off">
+            <p class="help-block text-danger"></p>
+          </div>
+          </div>
+    <form id="optionsForm" action='/api/users/updateFilters' method="POST" >
+        <div class="dropdown-container">
+            <div class="dropdown-content" id="dropdown-content">
+                <label>
+                    <input type="checkbox" name="selectedOptions" value="Backend"> Backend
+                </label>
+                <label>
+                    <input type="checkbox" name="selectedOptions" value="Frontend"> Frontend
+                </label>
+                <label>
+                    <input type="checkbox" name="selectedOptions" value="FullStack"> FullStack
+                </label>
+                <label>
+                    <input type="checkbox" name="selectedOptions" value="AIML"> AIML
+                </label>
+                <label>
+                    <input type="checkbox" name="selectedOptions" value="CyberSecurity"> CyberSecurity
+                </label>
+                <label>
+                    <input type="checkbox" name="selectedOptions" value="Blockchain"> Blockchain
+                </label>
+                <label>
+                    <input type="checkbox" name="selectedOptions" value="Design"> Design
+                </label>
+                <label>
+                    <input type="checkbox" name="selectedOptions" value="SQLDatabase"> SQLDatabase
+                </label>
+                <label>
+                    <input type="checkbox" name="selectedOptions" value="CloudComputing"> CloudComputing
+                </label>
+                <label>
+                    <input type="checkbox" name="selectedOptions" value="AppDevelopment"> AppDevelopment
+                </label>
+                <label>
+                    <input type="checkbox" name="selectedOptions" value="API"> API
+                </label>
+                
+            </div>
+        </div>
+        <div class="selected-items">
+            <strong>Selected Options:</strong>
+            <div id="selected-options"></div>
+        </div>
+        
+            <button type="submit" class="submit-btn" style="height: 40px; width:200px; font-size:20px; background-color: #4070f4;  color: white; font-size: 27px; margin-left: 40rem; border-radius: 15px;">Submit</button><a href="http://localhost:3000/updateFilters">Click here to see filtered data</a>
+          
+              </form>
+    <div id="table-container"></div>
+    </div>
+
+     <!-- JavaScript -->
+        
+        <script>
+        const thisForm = document.getElementById('optionsForm');
+            thisForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                
+            const selectedCheckboxes = Array.from(optionsForm.querySelectorAll('input[type="checkbox"]:checked'));
+            const selectedOptions = selectedCheckboxes.map(checkbox => checkbox.value);
+    
+            // Create an object with the selected data
+            const postData = {
+                selectedOptions: selectedOptions
+            };
+                console.log(postData);
+                let response = await fetch('/api/users/updateFilters', {
+                    method: 'POST',
+                    headers: {
+                'Content-Type': 'application/json' // Set the content type to JSON
+            },
+                body: JSON.stringify(postData) // Convert the object to a JSON string
+            });
+                
+
+                
+            
+                let result = await response.json();
+                console.log(result);
+
+
+
+                alert(result.message)
+                console.log(result)
+            });
+        </script>
+    </body>
+</html>

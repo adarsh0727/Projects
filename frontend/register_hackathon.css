@@ -1,0 +1,53 @@
+h2{
+    font-family: Sans-serif; 
+    font-size: 20px;     
+    font-style: normal; 
+    font-weight: bold; 
+    color: white;
+    text-align: center; 
+    margin-top: 33px;
+ 
+   }
+   table{
+    font-family: verdana; 
+    color:white; 
+    font-size: 16px; 
+    font-style: normal;
+   
+    /* font-weight: bold; */
+    /* background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);   */
+    border-collapse: collapse; 
+    /* border: 4px solid #000000; */
+    
+    background: rgba(0,0,0,0.8);
+    height:300px;
+    
+
+     
+   }
+   table.inner{
+
+    border: 10px;
+    font-size:3px;
+    background-color: #AEA8D3;
+    padding:2px;
+   }
+   input[type=text], input[type=email], input[type=number]{
+    width: 80%;
+    padding: 6px 12px;
+    color: white;
+    margin: 5px 0;
+    /* box-sizing: border-box; */
+    height:30px;
+   }
+   input[type=submit], input[type=reset]{
+    width: 15%;
+    padding: 8px 12px;
+    margin: 5px 0;
+    /* box-sizing: border-box; */
+   }
+   body{
+    background: #1c1e21 url(image-146@2x.png);
+    background-size: cover;
+
+   }

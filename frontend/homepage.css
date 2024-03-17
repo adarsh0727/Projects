@@ -1,0 +1,960 @@
+/* Reset some default margin and padding */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+div {
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Set a background color for the body */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Style the "home" section */
+.home {
+  background-color: #ffffff;
+  padding: 0px;
+  display: flex;
+  /* flex-direction: row; */
+    margin-left: 0px;
+  /* align-items: center; */
+}
+.boxes{
+    display: flex;
+    justify-content: center;
+    background-image: url(image-146@2x.png);
+    background-color: #11101d;
+    background-size: cover;
+    /* flex-direction: column; */
+}
+.boxinside{
+    display: flex;
+    flex-direction: column;
+}
+.insidebox3{
+    display: flex;
+    flex-direction: column;
+}
+.insidebox2{
+    display: flex;
+    flex-direction: column;
+}
+#box1{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Style the navigation div inside "home" */
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #f0faff;
+  width:100%;
+ 
+}
+.nav {
+    
+  position: fixed;
+  top: 0;
+  left: 12px;
+  width:98.3%;
+  padding: 15px 0px;
+  background: rgba(0,0,0,0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+}
+.nav,
+.nav .nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  justify-content: space-between;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav .logo {
+  font-size: 22px;
+  font-weight: 500;
+}
+.nav .nav-links {
+  column-gap: 30px;
+  list-style: none;
+}
+.nav .nav-links a {
+  transition: all 0.2s linear;
+}
+.nav.openSearch .nav-links a {
+  opacity: 0;
+  pointer-events: none;
+}
+.nav .search-icon {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.nav .search-box {
+  position: absolute;
+  right: 250px;
+  height: 45px;
+  max-width: 555px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s linear;
+}
+.nav.openSearch .search-box {
+  opacity: 1;
+  pointer-events: auto;
+}
+.search-box .search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  left: 15px;
+  color: #007bff;
+  transform: translateY(-50%);
+}
+.search-box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 0 15px 0 45px;
+}
+
+.nav .navOpenBtn,
+.nav .navCloseBtn {
+  display: none;
+}
+
+/* responsive */
+@media screen and (max-width: 1160px) {
+  .nav {
+    padding: 15px 100px;
+  }
+  .nav .search-box {
+    right: 150px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .nav {
+    padding: 15px 50px;
+  }
+  .nav .search-box {
+    right: 100px;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav .navOpenBtn,
+  .nav .navCloseBtn {
+    display: block;
+  }
+  .nav {
+    padding: 15px 20px;
+  }
+  .nav .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    max-width: 280px;
+    width: 100%;
+    padding-top: 100px;
+    row-gap: 30px;
+    flex-direction: column;
+    background-color: #11101d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    z-index: 100;
+  }
+  .nav.openNav .nav-links {
+    left: 0;
+  }
+  .nav .navOpenBtn {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav .navCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav .search-box {
+    top: calc(100% + 10px);
+    max-width: calc(100% - 20px);
+    right: 50%;
+    transform: translateX(50%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+/* responsive */
+@media screen and (max-width: 1160px) {
+  .nav {
+    padding: 15px 100px;
+  }
+  .nav .search-box {
+    right: 150px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .nav {
+    padding: 15px 50px;
+  }
+  .nav .search-box {
+    right: 100px;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav .navOpenBtn,
+  .nav .navCloseBtn {
+    display: block;
+  }
+  .nav {
+    padding: 15px 20px;
+  }
+  .nav .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    max-width: 280px;
+    width: 100%;
+    padding-top: 100px;
+    row-gap: 30px;
+    flex-direction: column;
+    background-color: #11101d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    z-index: 100;
+  }
+  .nav.openNav .nav-links {
+    left: 0;
+  }
+  .nav .navOpenBtn {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav .navCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .nav .search-box {
+    top: calc(100% + 10px);
+    max-width: calc(100% - 20px);
+    right: 50%;
+    transform: translateX(50%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Style the "hackathonleader" divs */
+.hackathonleadera,
+.hackathonleaderb,
+.hackathonleaderc,
+.hackathonleaderd {
+  background-color: rgba(0,0,0,0.8);
+
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  width: 350px;
+  color:white;
+}
+
+/* Style the "nameofhackathon" element inside "hackathonleader" */
+#nameofhackathon {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Style the "details" element inside "hackathonleader" */
+#details {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Style the "registe" button inside "hackathonleader" */
+#registe {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Add hover effect to the "registe" button */
+#registe:hover {
+  background-color: #0056b3;
+}
+
+/* Style the "insidebox2" div */
+.insidebox2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+/* Style the "hack" image inside "insidebox2" */
+#hack {
+  width: 750px;
+  height: 500px;
+}
+
+/* Style the "insidebox3" div */
+.insidebox3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Style the "aaa," "aab," "aac" divs inside "insidebox3" */
+.aaa,
+.aab,
+.aac {
+  background-color: rgba(0,0,0,0.8);
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  width: 250px;
+  color: white;
+}
+
+/* Style the developer photo */
+.devphoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+/* Style the "developernames" and "developerskills" elements */
+#developernames {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#developerskills {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Style the "addmemberbox" button */
+.addmemberbox button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Add hover effect to the "addmemberbox" button */
+.addmemberbox button:hover {
+  background-color: #0056b3;
+}
+
+/* Style the "home2" section */
+.home2 {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Style the "hackathon" banner */
+.hackthon.banner {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style the "smallbox" inside the "hackthon" banner */
+.smallbox {
+  padding: 10px;
+}
+
+/* Style the "hackathonname" and "organisationname" inside "smallbox" */
+#hackathonname {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#organisationname {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Style the "teamregistered" div inside "hackthon" banner */
+#teamregistered {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Style the "wordregister" and "worddate" inside "teamregistered" */
+#wordregister {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+#worddate {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+/* Style the banner below buttons */
+.bannerbelowbutton {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Style the buttons inside "holdbutton" */
+.holdbutton button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Add hover effect to the buttons */
+.holdbutton button:hover {
+  background-color: #0056b3;
+}
+
+/* Style the "developername" section */
+.developername {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Style the "developera" divs inside "developername" */
+.developera {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+  width: 20%; /* 50% width with margin */
+  height: 20%;
+}
+
+/* Style the "name," "skilla," "organisation," and "Add member" button inside "developera" */
+.name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.skilla {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.organisation {
+  font-size: 14px;
+  color: #e7e3e3;
+}
+
+.developera button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* Add hover effect to the "Add member" button */
+.developera button:hover {
+  background-color: #0056b3;
+}
+/* Style the ".mainbox1," ".mainbox2," and ".mainbox3" classes as white cards */
+/* Style the "#mainbox1," "#mainbox2," and "#mainbox3" IDs as white cards */
+/* Style the "#mainbox1," "#mainbox2," and "#mainbox3" IDs as white cards */
+#mainbox1,
+#mainbox2,
+#mainbox3 {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  border: 1px solid #9a9696;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for a card-like effect */
+  border-radius: 5px;
+  /* Add any additional styles you desire */
+  width: 38%;
+}
+
+/* Adjust the width of #mainbox1 to match .hackthon and .logo */
+
+
+/* Style the ".smallbox" inside "#mainbox1" */
+#mainbox1 .smallbox {
+  padding: 10px;
+  /* Add any additional styles you desire for .smallbox */
+}
+
+/* Style the "#hackathonname" and "#organisationname" inside ".smallbox" */
+#mainbox1 #hackathonname {
+  font-size: 18px;
+  font-weight: bold;
+  /* Add any additional styles you desire for #hackathonname */
+}
+
+#mainbox1 #organisationname {
+  font-size: 14px;
+  color: #b0afaf;
+  /* Add any additional styles you desire for #organisationname */
+}
+
+/* Style the "#teamregistered" div inside "#mainbox1" */
+#mainbox1 #teamregistered {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  /* Add any additional styles you desire for #teamregistered */
+}
+
+/* Style the "#wordregister" and "#worddate" inside "#teamregistered" */
+#mainbox1 #wordregister {
+  font-size: 14px;
+  margin-left: 5px;
+  /* Add any additional styles you desire for #wordregister */
+}
+
+#mainbox1 #worddate {
+  font-size: 14px;
+  margin-left: 10px;
+  /* Add any additional styles you desire for #worddate */
+}
+
+
+#dev{
+    height: 150px;
+}
+
+.logo{
+    width: 60%;
+   
+}
+.logo2{
+    width: 100%;
+    height:130px;
+   
+}
+.registerdlogo{
+    width: 35%;
+    margin-left: 25px;
+}
+#worddate{
+    margin-left: 110px;
+    margin-top: 12px;
+}
+.datelogo{
+    margin-left: 152px;
+    width: 10%;
+
+}
+.createteam{
+    width: 200px;
+    display: flex;
+    
+}
+.aaz{
+    background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin: 3px 34px 45px 25px;
+  width: 250px;
+  height: 300px;
+}
+.developera{
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  border: 1px solid #ccc;
+
+}
+body{
+    font-family: Raleway, Arial, sans-serif;
+      font-size:12px;
+      font-weight:300;
+      padding-left:20px;
+      width:100%;
+      height:55px;
+      color:#6d6d6d;
+    overflow-x:hidden;
+    background-color: rgba(0,0,0,0.8);
+    
+   
+  }
+  
+  a{
+    color:#1896f7;
+    text-decoration:none
+  }
+  
+  a:hover,a:focus{
+    color:#1896f7;
+    text-decoration:underline
+  }
+  
+  a:focus,
+  .btn:focus {
+    outline: none;
+  }
+  
+  .img-responsive {
+      border: 1px solid #ddd;
+  }
+  
+  /*-----------------------
+  ----- Typo Styles ------
+  -------------------------*/
+  h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+    font-weight:3;
+    
+  }
+  
+  .big-text{
+      font-size:19px;
+      font-weight:300;
+      line-height:62px;
+      letter-spacing:0.01em;
+      word-spacing: 0.15em;
+      text-transform:uppercase;
+      margin-left: 63px;
+  }
+  
+ 
+  
+  /*-----------------------
+  ----- Layout Styles -----
+  -------------------------*/
+.add-padding {
+      padding-top:50px;
+      padding-bottom:50px;
+  } 
+  
+  /*-----------------------
+  ----- Color Styles ------
+  -------------------------*/
+  
+  /* .bg-color1{
+      color:rgba(0,0,0,0.8);
+      background:#6b9e50;
+  } */
+  
+  /* .bg-color2{
+      color:rgba(0,0,0,0.8);
+      background:#1896f7;
+  } */
+/*   
+  .bg-color3{
+      color:#fff;
+      background:#334959;
+  } */
+/*   
+  .border-bottom-color2{
+      border-bottom:7px solid #48f718;
+  } */
+  
+  .border-top-color2{
+      /* border-top:7px solid #1896f7; */
+  }
+  
+  /* .color1 .service-icon,
+  .color1.service-item ul li:nth-child(2):before{
+      background:#509B9E;
+  } */
+  
+  .color1 .service-icon:after{
+      /* border:3px solid #1896f7; */
+  }
+  
+  /* .color2 .service-icon,
+  .color2.service-item ul li:nth-child(2):before{
+      background:#1896f7;
+  } */
+  
+  /* .color2 .service-icon:after{
+      border:3px solid #1896f7;
+  }
+   */
+  /* .color3 .service-icon,
+  .color3.service-item ul li:nth-child(2):before{
+      background:#334959;
+  } */
+  
+  /* .color3 .service-icon:after{
+      border:3px solid #334959;
+  }
+   */
+  /*------------------
+  ----- Buttons ------
+  --------------------*/
+  
+  .btn-color1,
+  .btn-color2{
+      padding: 10px 0px;
+      color:#fff;
+      font-size: 13px;
+      font-weight: 300;
+      
+      background:#1896f7;
+      outline: none !important;
+      border-radius:12px;
+      transition: opacity .2s ease-out;
+  }
+  
+  /* .btn-color1{
+      background:#509B9E;
+  } */
+  
+  /* .btn-color1:hover,
+  .btn-color2:hover{
+      color:#fff;
+      opacity: 0.9;
+  } */
+  
+  /* .btn-color1:focus,
+  .btn-color1:active,
+  .btn-color2:focus,
+  .btn-color2:active{
+      color:#fff;
+  } */
+  
+  /* .btn-color1 .fa,
+  .btn-color2 .fa{
+      margin-right: 15px;
+  } */
+  
+  /*----------------------
+  ----- Contact Styles ----
+  ------------------------*/
+  
+  /* #contact{
+      background-image:url('../images/bg-contact.png');
+      background-repeat:no-repeat;
+      background-position:0 100%;
+      background-color: #fff;
+  } */
+  
+  /* #contact-form .form-group label{
+      display:none;
+      font-size:18px;
+      line-height:24px;
+      font-weight:100;
+      text-transform:uppercase;
+  }
+   */
+  /* #contact-form.no-placeholder .form-group label{
+      display:block;
+  } */
+  
+  #contact-form .controls {
+      padding:0;
+      
+      border:1px solid #ddd;
+      border-radius:12px;
+      width:234px;
+      height:345px;
+      
+  }
+  
+  #contact-form .form-control {
+      background:transparent !important;
+      border:none;
+      border-bottom:3px solid transparent;
+      border-radius:0;
+      outline:none;
+      box-shadow:none;
+      height:56px;
+      font-size:18px;
+      line-height:32px;
+      font-weight:100;
+      padding-left:64px;
+      -webkit-transition:border-color .3s ease-out;
+      transition:border-color .3s ease-out;
+      border-radius:2px;
+  }
+  
+  #contact-form .form-group{
+      position:relative;
+  }
+  
+  #contact-form .form-group [class*=fa] {
+      display:block;
+      width:64px;
+      position:absolute;
+      top:0;
+      left:5px;
+      color:#e5e5e5;
+      font-size:13px;
+      line-height:53px;
+      text-align:center;
+      font-weight:300;
+      opacity:0.5;
+      transition:opacity .2s ease-out;
+  }
+  
+  #contact-form.no-placeholder .form-group [class*=fa]{
+      top:30px;
+  }
+  
+  #contact-form .form-control:focus + [class*=fa]{
+      opacity:0.8;
+  }
+  
+  #contact-form textarea.form-control {
+      height:auto;
+      max-width:80%;
+      min-width:100%;
+      font-size:15px;
+      line-height:5px;
+      padding-top:10px;
+  }
+  
+  #contact-form .form-control:focus {
+      background:#fff;
+      border-bottom:3px solid #1896f7;
+      outline:none;
+      box-shadow:none;
+      -webkit-transition:border-color .3s ease-in;
+      transition:border-color .3s ease-in;
+  }
+  
+  #contact-form .error-message {
+      padding:5px 0;
+      position:absolute;
+      top:-30px;
+      right:0;
+      font-size:4px;
+      font-weight:300;
+      color:#ff0000;
+      z-index:10;
+  }
+  
+  #contact-form .error-message:before {
+      content:"\00d7";
+      font-size: 2px;
+      line-height: 21px;
+      margin-right: 5px;
+  }
+  
+  /*----------------------
+  ----- Footer Styles ----
+  ------------------------*/
+  
+  #main-footer {
+      background: rgba(0,0,0,0.8);
+  }
+  
+  #main-footer p a {
+      padding-bottom: 40px;
+      font-size: 2px;
+      text-decoration: none;
+  }
+  
+  #main-footer p {
+      text-align: center; 
+  }
+  
+  .social-links {
+      list-style:none;
+      margin:0;
+      padding:14px;
+      margin-bottom:30px;
+  }
+  
+  .social-links li{
+      /* display:inline-block; */
+      margin: 5px;
+      border-radius:3px;
+      box-shadow:0 4px 0 transparent;
+      -webkit-transition:all .3s ease-out;
+      transition:all .3s ease-out;
+  }
+  
+  .social-links li a {
+      display:block;
+      color:#fff;
+      font-size:1px;
+      width:50px;
+      height:50px;
+      line-height:50px;
+      text-align:center;
+      background:#1896f7;
+      border-radius:50%;
+      -webkit-transition:all .3s ease-out;
+      transition:all .3s ease-out;
+  }
+  
+  .social-links li a:hover {
+      color:#fff;
+      background:#1896f7;
+  }
+  .line{
+    font-size:12px;
+    margin-left:64px;
+    margin-bottom:45px;
+  }
+  
+
+.social-links{
+  display:inline-block;
+}
+.social-links text-center{
+  display:flex;
+  gap:10px;
+  
+  
+}
+li:active :hover{
+  color:greenyellow;
+  
+}
