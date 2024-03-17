@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+</head>
+<body>
+    
+    <form action = "/user" method = "post">
+    <input type ="text" placeholder = "Email" name = "email"></input>
+    <div class = 'otp-ip'></div>
+    <button onclick = "generate()"
+    class  = "js-otp" type = 'submit'>Generate OTP</button>
+    </form>
+
+    <script>
+        const button = document.querySelector('.js-otp')
+        const otp = () => {
+            let random = Math.floor(Math.random()*9000 + 1000 );
+            random = JSON.stringify(random)
+            console.log(typeof(random));
+            const data = "<input type = 'text' placeholder = 'OTP' name = 'otp'></input>"
+            document.querySelector('.otp-ip').innerHTML = data;
+            button.innerHTML = 'Submit'
+            
+        }
+        const generate = () => {
+            if (button.innerHTML === 'Generate OTP') {otp()}
+        else if(button.innerHTML === 'Submit'){
+            // button.innerHTML = 'Good'
+            // console.log('otp created')
+            window.location.href = './adarsh.hbs'
+        }
+
+        
+    }
+   
+    
+        
+        
+        
+         
+    </script>
+</body>
+</html>
