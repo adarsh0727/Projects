@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <link rel="stylesheet" href="./P2.css">
+</head>
+<body>
+    <h1>ROCK PAPER SCISSOR</h1>
+    <button onclick="
+        playGame('Stone')
+    " class = "moveButton"><img src = "projectImages/Stone.png" class = "moveIcon"></button>
+    <button onclick="
+        playGame('Paper')
+    " class = "moveButton"><img src = "./projectImages/Paper.png" class = "moveIcon"></button>
+    <button onclick="
+        playGame('Scissor')
+    " class = "moveButton"><img src = "projectImages/Scissor.png" class = "moveIcon"></button>
+    
+    <p class = "js-result css-result"></p>
+
+    <p class = "js-moves"></p>
+
+    <p class ="score"></p>
+    <button onclick="
+       localStorage.removeItem('score');
+       score = {Win: 0, Lost: 0, Tie: 0};
+       updateScore();
+    ">Reset</button>
+
+   
+
+<script src = './P2.js'></script>
+</body>
+</html>

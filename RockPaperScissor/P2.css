@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(25,25, 25);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.moveIcon{
+    height: 75px; 
+    margin: 10px;
+}
+
+.moveButton{
+    margin: 10px;
+    background-color: transparent;
+    border-radius: 100%;
+    border-color: white;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.css-result{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.selectMoves{
+    height: 95px;
+    margin-left: 5px; 
+}
