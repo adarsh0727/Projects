@@ -16,20 +16,25 @@ Welcome to my project repository showcasing a variety of applications and tools 
 
 ## Project 1: APIJobs
 
+
 The APIjobs project is a comprehensive RESTful API built using Node.js and Express.js. It is designed for managing job listings with user authentication and CRUD operations.
 
--**Features**
-User Registration and Authentication: Secure endpoints for user signup and login using JWT.
-Job Listings Management: Create, retrieve, update, and delete job listings.
-Security Measures: Includes helmet, cors, xss-clean, and express-rate-limit for enhanced security.
-API Documentation: Documented using Swagger.
-**Technologies Used**
--**Node.js**
--**Express.js**
--**MongoDB**
--**Mongoose**
--**JWT (JSON Web Token)**
--**Swagger**
+## Features
+
+- **User Registration and Authentication**: Secure endpoints for user signup and login using JWT.
+- **Job Listings Management**: Create, retrieve, update, and delete job listings.
+- **Security Measures**: Includes helmet, cors, xss-clean, and express-rate-limit for enhanced security.
+- **API Documentation**: Documented using Swagger.
+
+## Technologies Used
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT (JSON Web Token)
+- Swagger
+
 
 ---
 ## Project 2: Hackbots
